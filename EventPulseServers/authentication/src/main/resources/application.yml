@@ -1,0 +1,8 @@
+server:
+    port:
+        8081
+
+spring:
+    data:
+        mongodb:
+            uri: mongodb+srv://shubhangandas7366:Swarnoflick5@eventpulsenosql.tzevydl.mongodb.net/EventPulseDB?retryWrites=true&w=majority&appName=EventPulseNoSQL
