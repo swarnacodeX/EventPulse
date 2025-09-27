@@ -1,4 +1,5 @@
 package com.eventpulse.events.Model;
+import java.util.List;
 import java.util.UUID;
 
 import jakarta.persistence.Column;
@@ -25,6 +26,8 @@ public class Event {
     private String venue;
     @Column(name="sponsors",nullable=true)
     private String sponsors;
+    @Column(name="seatSTS")
+    private List<String> seatSTS;
 
     // Getters and Setters
     public UUID getEventId() {
@@ -73,5 +76,11 @@ public class Event {
 
     public void setSponsors(String sponsors) {
         this.sponsors = sponsors;
+    }
+    public List<String> getEventSTS(){
+        return seatSTS;
+    }
+    public void setEventSTS(List<String> seatSTS){
+        this.seatSTS=seatSTS;
     }
 }

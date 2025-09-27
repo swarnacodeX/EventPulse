@@ -1,5 +1,7 @@
 
 spring:
+    application:
+     name: events
     datasource:
         url: jdbc:postgresql://localhost:5432/eventpulseSQL
         username: postgres

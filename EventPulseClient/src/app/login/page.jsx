@@ -4,6 +4,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import axios from 'axios';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -18,6 +19,7 @@ export default function LoginPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Login data:', formData);
+    const response=axios.post();
     // Add your authentication logic here
   };
 

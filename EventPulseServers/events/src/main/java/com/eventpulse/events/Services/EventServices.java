@@ -15,6 +15,10 @@ public class EventServices {
     public List<Event> getEvents(){
         return eventRepository.findAll();
     }
+    public List<String> getEventSeatStatus(UUID eventId){
+        return eventRepository.findById(eventId).map(Event::getEventSTS)
+            .orElseThrow(() -> new RuntimeException("Event not found"));
+    }
     public Event save(Event event) {
         return eventRepository.save(event);
     }
