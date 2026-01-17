@@ -228,6 +228,8 @@ export default function HomePage() {
   function logout(){
     clearCredentials();
     localStorage.removeItem("email");
+    localStorage.removeItem("User-id");
+    localStorage.removeItem("role");
     router.push("/login");
   }
   // Filter events based on search query
@@ -288,7 +290,7 @@ export default function HomePage() {
                 </Button>
                 { role=="ORGANIZER" && (
                   <Button className="bg-blue-600 hover:bg-blue-700">
-                    <Link href="/organizer/dashboard">Dashboard</Link>
+                    <Link href="/custom/organizer/dashboard">Dashboard</Link>
                   </Button>
                 )}
               </div>
